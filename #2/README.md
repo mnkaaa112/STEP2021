@@ -15,7 +15,7 @@
 int n; //キャッシュのサイズ
 String[][] cache = new String[n][4]; 
 //cache[url][contents][一つ前にキャッシュされたデータのハッシュ値][この次にキャッシュされたデータのハッシュ値]
-//前後に格納されたデータの格納場所を保持しLinkedListのような働きをする
+//時間的に前後に格納されたデータの格納場所を保持しLinkedListのような働きをする
 LinkedList<String>[][] database; //ハッシュ値が重複した際のデータ格納場所を保持するデータベース
 int newest = 0; //一番古いデータのハッシュ値
 int oldest = 0; //一番新しいデータのハッシュ値
