@@ -26,7 +26,11 @@ urlのハッシュ値(key)を求める
 キャッシュのkeyの場所に該当urlが格納されているか
 No→
   ハッシュ値が重複したために別の場所に保存されているか(databaseを参照)
-  Yes→該当urlが格納されている場所のハッシュ値を得てnewestに設定
+    Yes→該当urlが格納されている場所のハッシュ値(newkey)を得てnewestに設定、cache[newkey]の前後を繋ぎなおす
+    No→キャッシュには格納されていないので一番古いurlと入れ替える、newestをoldestに入れ替えて前後を繋ぎなおす
+Yes→
+  keyをnewestにして前後を繋ぎなおす
+  
   
 ```
 
