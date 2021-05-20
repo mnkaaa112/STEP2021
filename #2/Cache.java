@@ -33,13 +33,17 @@ class Cache {
             //cache has the url
                 String where = database[key][1].get(index);
                 int newkey = Integer.parseInt(where);
+                cache[Integer.parseInt(cache[newkey][2])][3]=cache[newkey][3];
+                cache[Integer.parseInt(cache[newkey][3])][2]=cache[newkey][2];
+                cache[newkey][2]=String.valueOf(newest);
+                cache[newkey][3]=null;
                 newest = newkey;
             }else{
                 //should put the url at another hashkey
                 int newkey = oldest;
                 database[key][0].add(url);
                 database[key][1].add(String.valueOf(newkey));
-                oldest = Integer.parseInt(cache[oldest][3]); //next
+                oldest = Integer.parseInt(cache[oldest][3]); //next of oldest is oldest
                 cache[newkey][0]=url;
                 cache[newkey][1]=contents;
                 cache[newkey][2]=String.valueOf(newest); //newprev
@@ -48,6 +52,10 @@ class Cache {
             }
         }else{
         //cache has the url at the right space
+            cache[Integer.parseInt(cache[key][2])][3]=cache[key][3];
+            cache[Integer.parseInt(cache[key][3])][2]=cache[key][2];
+            cache[key][2]=String.valueOf(newest);
+            cache[key][3]=null;
             newest = key;
         }
     }
