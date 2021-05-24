@@ -7,6 +7,7 @@
 - tokensを順に読んでいき、typeがNUMBER,PLUS,MINUSのときはそのままrevised_tokensに格納
 - typeがMUL,DIVの時は次の数字とrevised_tokensから最後のnumberを掛けて(割って)計算結果をrevised_tokensに格納
 ```python
+#'MUL'の時の処理
 elif tokens[index]['type'] == 'MUL':
   a = revised_tokens[-1]['number']
   if tokens[index+1]['type'] == 'NUMBER':
