@@ -55,7 +55,7 @@ Calculator1.pyに対して以下のテストケースを用意した。
 - 'B_Out'が出てきたら()の中身を計算するためのtemp_tokens用意して'B_In'が出るまで遡ってtemp_tokensに格納する
 - temp_tokensをrevise_tokenize(), evaluate_plusminus()で処理させる
 - ()内のtokenを計算結果で置き換える
-- 上記の処理を'B_Out'が出てくるまで行い括弧無しのtokensを得る
+- 上記の処理を'B_Out'が出てくる度に行い括弧無しのtokensを得る
 
 ```python
 def bracket_calc(tokens): #括弧なしのtokensにする
