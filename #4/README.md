@@ -60,7 +60,7 @@ javac BFS.java
 java -Xmx5000M BFS "どこから" "どこまで"
 //例　java -Xmx5000M BFS Google 渋谷
 ```
-⑤20分ほどで結果が得られる
+⑤11分ほどで結果が得られる
 targetからsourceまでのpathが出力される
 例) 人工知能<-Google
 
