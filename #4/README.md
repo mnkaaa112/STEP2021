@@ -36,6 +36,7 @@ class binarytree{
 ```
 ###  実行方法
 ①下図のようにプログラムとデータを配置
+```
 step_wikipedia-graph
 ├── data
 │   ├── graph_small.png
@@ -48,7 +49,7 @@ step_wikipedia-graph
 ├── wikipedia_sample.cc
 ├── BFS.java
 └── Isolate.java
-
+```
 ②BFS.javaにおいて小さいデータで試したい時はファイル入力をlinks_small.txt, pages_small.txtに変更する
 ③コンパイルする
 ```shell
@@ -69,6 +70,7 @@ targetからsourceまでのpathが出力される
 
 ###  実行方法
 ①下図のようにプログラムとデータを配置
+```
 step_wikipedia-graph
 ├── data
 │   ├── graph_small.png
@@ -81,7 +83,7 @@ step_wikipedia-graph
 ├── wikipedia_sample.cc
 ├── BFS.java
 └── Isolate.java
-
+```
 ②BFS.javaにおいて小さいデータで試したい時はファイル入力をlinks_small.txt, pages_small.txtに変更する
 ③コンパイルする
 ```shell
