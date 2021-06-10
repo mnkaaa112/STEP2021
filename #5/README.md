@@ -1,7 +1,7 @@
 # TSP
 
 ## TSP_greedy.java
-現在いる点(current)から一番近い点をnextとして繋げていくアルゴリズム
+現在いる点(current)から一番近い点をnextとして繋げていくアルゴリズム  
 各点をMapPointクラスに格納し前後のMapPointを保持
 ```java
 class MapPoint{
@@ -19,10 +19,10 @@ class MapPoint{
     }
 }
 ```
-
-
+  
+  
 ## TwoOpt.java
-TSP_greedy.javaを改良したプログラム
+TSP_greedy.javaを改良したプログラム  
 一番近い点をnextとして繋げた終えた後、交差している線を繋げ直す
 
 
@@ -89,7 +89,7 @@ static void reverse(MapPoint from, MapPoint to){ //順番を逆にする関数
 |524| 25331.84| 23809.94|
 |2048| 49892.05| 47752.11 |
 
-Nが大きい時は多少の改善が見られたが、大幅な改善には至らなかった。
+Nが大きい時は多少の改善が見られたが、大幅な改善には至らなかった。  
 二番目に近い点だけでなく全ての点に対して繋げ直した距離を比較した場合はTwoOpt.javaよりも性能が悪かった。
 
 
