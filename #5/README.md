@@ -66,6 +66,18 @@ current = begin;
                 current = current.next;
             }
 ```
+#### void reverse()
+```
+static void reverse(MapPoint from, MapPoint to){ //順番を逆にする関数
+        MapPoint current = from.prev;
+        while(current!=to){
+            MapPoint temp = current.next;
+            current.next = current.prev;
+            current.prev = temp;
+            current = current.prev;
+        }
+    }
+```
 #### 結果
 |N| TSP_greedy.java | TwoOpt.java |
 |----|----|---- 
