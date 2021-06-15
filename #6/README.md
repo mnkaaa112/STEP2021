@@ -9,8 +9,10 @@ First Fit, Best Fit, Worst Fitについて性能比較した結果
 |           | utilization |40%| |40%|
 | callenge3 | time |160ms| |98216ms|
 |           | utilization |8%| |4%|
-| callenge4 | time | | | |
-|           | utilization | | | |
+| callenge4 | time |68716ms|25062ms| |
+|           | utilization |15%|71%|7%|
+| callenge5 | time |46236ms|11968ms| |
+|           | utilization |15%|74%| |
 
 ### First Fit 
 first_malloc.c
