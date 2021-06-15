@@ -49,6 +49,7 @@ void *my_malloc(size_t size) {
   }
   metadata = best;//metadataにbestを受け渡す
   prev = best_prev;
+  ...
 ```
 
 worst_malloc.c
@@ -73,4 +74,5 @@ void *my_malloc(size_t size) {
   }
   metadata = worst;
   prev = worst_prev;
+  ...
 ```
