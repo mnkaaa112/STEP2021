@@ -3,16 +3,16 @@
 First Fit, Best Fit, Worst Fitについて性能比較した結果
 | | |First Fit|Best Fit|Worst Fit|
 | ---- | ---- | ---- | ---- | ---- |
-| callenge1 | time |10ms| |1530ms|
-|           | utilization |70%| |70%|
-| callenge2 | time |8ms| |720ms|
-|           | utilization |40%| |40%|
-| callenge3 | time |160ms| |98216ms|
-|           | utilization |8%| |4%|
-| callenge4 | time |68716ms|25062ms| |
+| callenge1 | time |11ms|1494ms|1531ms|
+|           | utilization |70%|70%|70%|
+| callenge2 | time |11ms|665ms|720ms|
+|           | utilization |40%|40%|40%|
+| callenge3 | time |160ms|819ms|98216ms|
+|           | utilization |7%|50%|4%|
+| callenge4 | time |43965ms|10922ms|1265690ms|
 |           | utilization |15%|71%|7%|
-| callenge5 | time |46236ms|11968ms| |
-|           | utilization |15%|74%| |
+| callenge5 | time |39024ms|6052ms|1085979ms|
+|           | utilization |15%|74%|7%|
 
 ### First Fit 
 first_malloc.c
