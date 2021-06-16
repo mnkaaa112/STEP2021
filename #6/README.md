@@ -21,6 +21,8 @@ right-connectした時に性能が向上したのは**First Fit, Worst Fit**の�
 my_free()内の処理が適切であるとするならば、Best Fitで性能が向上しなかったのは、連結してfree領域のサイズが大きくなったことでBest Fitとして見つける最適サイズのfree領域が少なくなった、fragmentが返って増えることになったからではないかと考える。(ただのバグである可能性もあり。)
 
 ＜各コードの詳細＞  
+コード全体をgitにあげていますが、simple_malloc.cから修正した箇所はそれぞれ以下の箇所のみです。  
+
 first_malloc.c
 ```java
 void *my_malloc(size_t size) {
