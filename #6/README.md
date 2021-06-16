@@ -22,7 +22,7 @@ my_free()内の処理が適切であるとするならば、Best Fitで性能が
 
 ＜各コードの詳細＞  
 コード全体をgitにあげていますが、simple_malloc.cから修正した箇所はそれぞれ以下の箇所のみです。  
-malloc.cはBest Fit(right-connection)バージョンです。  
+__malloc.cはBest Fit(right-connection)バージョンです。__  
 
 first_malloc.c
 ```java
