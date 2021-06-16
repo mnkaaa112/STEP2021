@@ -1,6 +1,7 @@
 # malloc 
 ## *First Fit* vs *Best Fit* vs *Worst Fit* 
-First Fit, Best Fit, Worst Fitについて性能比較した結果
+First Fit, Best Fit, Worst Fitについて性能比較した結果　  
+(right-connectはfreeする際に後ろに繋げられるfree領域があったときに連結する処理を行なった場合)
 | | |First Fit|First Fit(right-connect)|Best Fit|Best Fit(right-connect)|Worst Fit|Worst Fit(right-connect)|
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | callenge1 | time |11ms|885ms|1494ms|1256ms|1531ms|2497ms|
@@ -14,7 +15,12 @@ First Fit, Best Fit, Worst Fitについて性能比較した結果
 | callenge5 | time |39024ms|28076ms|6052ms|3573ms|1085979ms|148808ms|
 |           | utilization |15%|21%|74%|71%|7%|15%|
 
+＜考察＞  
+First Fit, Best Fit, Worst Fitでは**Best Fit**が最も性能(Utilization)が良かった。  
+right-connectした時に性能が向上したのは**First Fit, Worst Fit**の場合であった。  
+my_free()内の処理が適切であるとするならば、Best Fitで性能が向上しなかったのは、連結してfree領域のサイズが大きくなったことでBest Fitとして見つける最適サイズのfree領域が少なくなった、fragmentが返って増えることになったからではないかと考える。(ただのバグである可能性もあり。)
 
+＜各コードの詳細＞  
 first_malloc.c
 ```java
 void *my_malloc(size_t size) {
