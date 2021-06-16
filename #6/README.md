@@ -86,7 +86,7 @@ void *my_malloc(size_t size) {
   ...
 ```
 
-my_free
+right-connection(my_free)について
 ```java
 void my_free(void *ptr) {
   simple_metadata_t *metadata = (simple_metadata_t *)ptr - 1;
