@@ -1,7 +1,7 @@
 ## TSP Challenge
 ### 検討手法1: TSP_TwoOpt.java(2-Optを繰り返す)
 以下に示すMapPointクラスとchangePointメソッドを用いて2-Optを実現した。  
-結果が最も良かった2-Optの繰り返し回数＝
+結果が最も良かった2-Optの繰り返し回数＝12回
 ```java
 class MapPoint{
     final int key;
@@ -131,9 +131,10 @@ while((l = reader.readLine())!=null){
 
 点を四つのエリアに分け、それぞれを2-Optで繋ぎ、さらに全体を2-Optで最適化した。
 
-#### 結果(7. N=8192)
-||TSP_TwoOpt|TSP_4area|TSP_8area|
+### 結果(input_7 N=8192)
+|Test Case|TSP_TwoOpt|TSP_4area|TSP_8area|
 |----|----|----|----|
-|実行結果||84846|85037|
+|Challenge 6|44083.25|**43094.73**|43242.19|
+|Challenge 7|**84127.73**|84843.11|85037.05|
 
-したがって今回実装したアルゴリズム、分割の方法では分割数を増やしても性能は向上しなかった。
+したがって、Challenge6ではTSP_TwoOptが最適であったが、Challenge7ではTSP_4areaが最適であるという結果が得られた。
